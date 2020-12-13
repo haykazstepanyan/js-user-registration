@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Form Validation</title>
+		<!-- Google fonts -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Montserrat"
+			rel="stylesheet"
+		/>
+		<!-- styles -->
+		<link href="assets/css/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<main>
+			<div class="registration">
+				<div class="first-step">
+					<div class="registration__headings">
+						<h2>Step 1 / 3</h2>
+						<p>Tell use who you are</p>
+					</div>
+					<div class="form-group">
+						<div class="input-group">
+							<input type="text" name="firstName" placeholder="First Name" />
+						</div>
+						<div class="input-group">
+							<input type="text" name="lastName" placeholder="Last Name" />
+						</div>
+						<div class="input-group">
+							<select name="country" class="countries-list">
+								<option value="" disabled selected hidden>
+									Choose your country
+								</option>
+							</select>
+						</div>
+						<div class="input-group">
+							<input type="text" name="city" placeholder="City" />
+						</div>
+						<div class="input-group">
+							<input type="text" name="address" placeholder="Address" />
+						</div>
+						<div class="input-group registration__error-place">
+							<input type="text" name="postalCode" placeholder="Postal Code" />
+						</div>
+						<div class="input-group registration__checkbox">
+							<input type="checkbox" name="shippingCheckbox" />
+							<span><b>Use filled data for shipping</b></span>
+						</div>
+						<div class="input-group">
+							<select name="shippingCountry" class="countries-list">
+								<option value="" disabled selected hidden>
+									Choose shipping country
+								</option>
+							</select>
+						</div>
+						<div class="input-group">
+							<input
+								type="text"
+								name="shippingCity"
+								placeholder="Shipping City"
+							/>
+						</div>
+						<div class="input-group">
+							<input
+								type="text"
+								name="shippingAddress"
+								placeholder="Shipping Address"
+							/>
+						</div>
+						<div class="input-group registration__error-place">
+							<input
+								type="text"
+								name="shippingPostalCode"
+								placeholder="Shipping Postal Code"
+							/>
+						</div>
+						<div class="input-group">
+							<button class="first-step__button" data-direction="next">
+								Next
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="second-step">
+					<div class="registration__headings">
+						<h2>Step 2 / 3</h2>
+						<p>Choose a package</p>
+					</div>
+					<div class="form-group">
+						<div class="input-group registration__error-place">
+							<input type="email" name="email" placeholder="Email" />
+						</div>
+						<div class="input-group registration__error-place">
+							<input type="password" name="password" placeholder="Password" />
+						</div>
+						<div class="input-group registration__error-place">
+							<input
+								type="password"
+								name="repeatPassword"
+								placeholder="Repeat Password"
+							/>
+						</div>
+						<div class="input-group input-group__radio-buttons">
+							<div>
+								<input
+									type="radio"
+									name="package"
+									value="standard"
+									id="standard"
+								/>
+								<label for="standard" class="radio-labels">
+									Standard Package
+								</label>
+							</div>
+							<div>
+								<input
+									type="radio"
+									name="package"
+									value="premium"
+									id="premium"
+								/>
+								<label for="premium" class="radio-labels">
+									Premium Package
+								</label>
+							</div>
+						</div>
+						<div class="input-group">
+							<button class="second-step__buttons" data-direction="previous">
+								Previous
+							</button>
+							<button class="second-step__buttons" data-direction="next">
+								Next
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="third-step">
+					<div class="registration__headings">
+						<h2>Step 3 / 3</h2>
+						<p>Fill your credit card details</p>
+					</div>
+					<div class="form-group">
+						<div
+							class="input-group input-group__card-number registration__error-place"
+						>
+							<input
+								name="credit-card-number"
+								pattern="[0-9]"
+								type="text"
+								maxlength="19"
+								placeholder="0000 0000 0000 0000"
+								onkeypress="return isNumberKey(event)"
+							/>
+						</div>
+						<div class="input-group registration__error-place">
+							<input
+								type="text"
+								name="owner"
+								maxlength="100"
+								placeholder="Owner's full name"
+								onkeypress="return /[a-z, ]/i.test(event.key)"
+							/>
+						</div>
+						<div class="input-group registration__error-place">
+							<input
+								type="text"
+								name="cvc"
+								placeholder="CVC"
+								maxlength="4"
+								onkeypress="return isNumberKey(event)"
+							/>
+						</div>
+						<div class="input-group registration__error-place">
+							<input
+								type="text"
+								name="expDate"
+								placeholder="MM/YY"
+								onkeypress="return isNumberKey(event)"
+								maxlength="5"
+							/>
+						</div>
+						<div class="input-group">
+							<button class="third-step__buttons" data-direction="previous">
+								Previous
+							</button>
+							<button class="third-step__buttons" data-direction="next">
+								Register
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="registration__successful">
+					<div>
+						<img
+							src="assets/img/successful.png"
+							alt="Successful Registration"
+						/>
+					</div>
+					<div>
+						<p>Congratulations, you've successfully registered!</p>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script type="module" src="assets/js/main.js"></script>
+		<script>
+			function isNumberKey(evt) {
+				let charCode = evt.which ? evt.which : evt.keyCode;
+				return !(charCode > 31 && (charCode < 48 || charCode > 57));
+			}
+		</script>
+	</body>
+</html>

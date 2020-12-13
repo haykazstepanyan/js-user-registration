@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.second-step,
+.third-step {
+  display: none;
+}
+
+.form-group {
+  padding: 10px 0;
+}
+
+.input-group {
+  width: 100%;
+  padding: 0 25px;
+  margin-bottom: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 37px;
+}
+
+.input-group__radio-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+}
+
+.input-group__radio-buttons div:last-child {
+  margin-top: 10px;
+}
+
+.input-group__radio-buttons input,
+.input-group__radio-buttons label {
+  cursor: pointer;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group input[type="password"] {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  padding: 0 10px;
+  border: 1px solid #adadad;
+  border-radius: 5px;
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="email"]:focus,
+.input-group input[type="password"]:focus {
+  outline-color: #6adaff;
+}
+
+.input-group button {
+  background-color: #6adaff;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  padding: 12px 25px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.input-group select {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+  padding: 0 10px;
+  border: 1px solid #adadad;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.input-group select:focus {
+  outline-color: #6adaff;
+}
+
+.input-group__card-number {
+  position: relative;
+}
+
+.input-group__card-number img {
+  position: absolute;
+  top: 0;
+  right: 35px;
+  width: 35px;
+  height: 35px;
+}
+
+.error {
+  color: #ff0000;
+  font-style: italic;
+  font-size: 13px;
+  padding-left: 15px;
+}
+
+.registration {
+  background-color: #e2e2e2;
+  width: 35%;
+  margin: 0 auto;
+  margin-top: 150px;
+  border-radius: 5px;
+}
+
+.registration__headings {
+  padding: 10px 25px;
+  background: #eee;
+}
+
+.registration__checkbox {
+  height: 20px;
+}
+
+.registration__error-place {
+  height: 55px;
+}
+
+.registration__error-place input {
+  height: 37px !important;
+}
+
+.registration__successful {
+  display: none;
+  background: #f7f7f7;
+}
+
+.registration__successful img {
+  width: 100%;
+  height: auto;
+}
+
+.registration__successful p {
+  font-size: 32px;
+  text-align: center;
+  padding-bottom: 25px;
+}
+/*# sourceMappingURL=style.css.map */
